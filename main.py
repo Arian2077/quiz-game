@@ -5,62 +5,80 @@ right_answers = ["Well done", "you got it right", "nice job", "Correct", "1 scor
 score = 0
 
 
-
-
 def E_questions():
     global score
-    Q1 = input("Who was the main villain in Batman Arkham Asylum? ")
-    if Q1.lower() == "joker":
-        print(rnd.choice(right_answers))
-        score += 1
-    else:
-        print("Wrong answer, it was joker")
+    for i in range(5):
+        num = rnd.randint(0, 6)
+        EQ = ["Who was the main villain in Batman Arkham Asylum? ",
+              "What was the Max Payne job in first and second game? ",
+              "In which game of Spider-Man you can get two endings? ",
+              "Who was the main character of Assassin Brotherhood? ",
+              "What is the name of dying light 1 city? ", "Who was Edward Kenway? ",
+              "Name one the Resident Evil 0 protagonist"
+              "How many games Grand Thief Auto has? "]
+        print(EQ[num])
 
-    Q2 = input("What was the Max Payne job in first and second game? ")
-    if Q2.lower() == "he was a police officer" or Q2.lower() == "police officer" or Q2.lower() == "detective":
-        print(rnd.choice(right_answers))
-        score += 1
-    else:
-        print("Incorrect, He was a police officer and in third game he was a bodyguard")
+        answer = input("Answer: ").lower()
+        if num == 0:
+            if answer == "joker":
+                print(rnd.choice(right_answers))
+                score += 1
+            else:
+                print("Wrong answer, it was joker")
+        elif num == 1:
+            if answer == "he was a police officer" or answer == "police officer" or answer == "detective":
+                print(rnd.choice(right_answers))
+                score += 1
+            else:
+                print("Incorrect, He was a police officer and in third game he was a bodyguard")
 
-    Q3 = input("In which game of Spider-Man you can get two endings? ")
-    if Q3.lower() == "in spider-man web of shadows" or Q3.lower() == "in spiderman web of shadows" or \
-            Q3.lower() == "in web of shadows" or Q3.lower() == "web of shadows":
-        print(rnd.choice(right_answers))
-        score += 1
-    else:
-        print("wrong,you can get two endings in Spider-Man Web Of Shadow!")
+        elif num == 2:
+            if answer == "in spider-man web of shadows" or answer == "in spiderman web of shadows" or \
+                    answer == "in web of shadows" or answer == "web of shadows":
+                print(rnd.choice(right_answers))
+                score += 1
+            else:
+                print("wrong,you can get two endings in Spider-Man Web Of Shadow!")
 
-    Q4 = input("Who was the main character of Assassin Brotherhood? ")
-    if Q4.lower() == "ezio auditore" or Q4.lower() == "ezio":
-        print("I mean who can forget him? correct answer")
-        score += 1
-    else:
-        print("How you don't know him? it was Ezio Auditore")
+        elif num == 3:
+            if answer == "ezio auditore" or answer == "ezio":
+                print("I mean who can forget him? correct answer")
+                score += 1
+            else:
+                print("How you don't know him? it was Ezio Auditore")
 
-    Q5 = input("What is the name of dying light 1 city? ")
-    if Q5.lower() == "harran":
-        print(rnd.choice(right_answers))
-        score += 1
-    else:
-        print("It is a quarantine zone in a Middle-eastern city called Harran")
+        elif num == 4:
+            if answer == "harran":
+                print(rnd.choice(right_answers))
+                score += 1
+            else:
+                print("It is a quarantine zone in a Middle-eastern city called Harran")
 
-    Q6 = input("Who was Edward Kenway? ")
-    if Q6.lower() == "main character of assassin black flag" or Q6.lower() == "main character of assassin 4" \
-            or Q6.lower() == "main character of assassin four" or Q6.lower() == "protagonist of assassin black flag" or \
-            Q6.lower() == "protagonist of assassin 4" or Q6.lower() == "protagonist of assassin four" \
-            or Q6.lower() == "ac black flag":
-        print(rnd.choice(right_answers))
-        score += 1
-    else:
-        print("He was the protagonist / main character of Assassin creed: black flag")
+        elif num == 5:
+            if answer == "main character of assassin black flag" or answer == "main character of assassin 4" \
+                    or answer == "main character of assassin four" or answer == "protagonist of assassin black flag" or \
+                    answer == "protagonist of assassin 4" or answer == "protagonist of assassin four" \
+                    or answer == "ac black flag":
+                print(rnd.choice(right_answers))
+                score += 1
+            else:
+                print("He was the protagonist / main character of Assassin creed: black flag")
 
-    Q7 = input("name one of the protagonists in Resident evil zero :) ")
-    if Q7.lower() == "billy coen" or Q7.lower() == "billy" or Q7.lower() == "rebecca chambers" or Q7.lower() == "rebecca":
-        print(rnd.choice(right_answers))
-        score += 1
-    else:
-        print("Billy Coen and Rebecca chambers")
+        elif num == 6:
+            if answer == "billy coen" or answer == "billy" or answer == "rebecca chambers" or answer == "rebecca":
+                print(rnd.choice(right_answers))
+                score += 1
+            else:
+                print("Billy Coen and Rebecca chambers")
+
+        elif num == 7:
+            if answer == "17":
+                print(rnd.choice(right_answers))
+                score += 1
+            else:
+                print("The right answer is 17")
+        else:
+            print("Error")
 
 
 def M_questions():
@@ -70,8 +88,10 @@ def M_questions():
 def H_questions():
     pass
 
+
 def C_questions():
     pass
+
 
 def p_progress():
     print("you answered " + str(score) + " questions correctly")
