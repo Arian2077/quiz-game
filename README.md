@@ -1,2 +1,2 @@
 # quiz-game
-just for fun
+This is a quiz game about games
